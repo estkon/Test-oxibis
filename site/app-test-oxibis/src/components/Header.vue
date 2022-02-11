@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid header">
+  <div class="container-fluid header">
     <div class="row">
       <div class="col-12 logo">
         <img src="../assets/img/header_logo.svg" alt="Oxibis Logo" />
@@ -13,23 +13,27 @@
               placeholder="référence,collection"
             />
             <label for="search">
-              <img src="../assets/img/loupe.svg" class="search-img" alt="loupe icone" />
+              <img
+                src="../assets/img/loupe.svg"
+                class="search-img"
+                alt="loupe icone"
+              />
             </label>
           </div>
           <div class="animation-pro bouton">
-              <button class="btn-pro">
-                <p class="text-pro">PRO</p>
-              </button>
-              <ul class="list-pro">
-                    <li>
-                      <img src="../assets/img/plume.svg" alt="plume icone"/>
-                      <p>PRESS</p>
-                    </li>
-                    <li>
-                      <img src="../assets/img/cadenas.svg" alt="plume icone"/>
-                      <p>PRO</p>
-                    </li>  
-              </ul>
+            <button class="btn-pro">
+              <p class="text-pro">PRO</p>
+            </button>
+            <ul class="list-pro">
+              <li>
+                <img src="../assets/img/plume.svg" alt="plume icone" />
+                <p>PRESS</p>
+              </li>
+              <li>
+                <img src="../assets/img/cadenas.svg" alt="plume icone" />
+                <p>PRO</p>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>
@@ -39,8 +43,8 @@
 
 <script>
 export default {
-  name: 'Header'
-}
+  name: "Header",
+};
 </script>
 
 <style lang="scss">
@@ -65,6 +69,8 @@ export default {
   box-shadow: 0px 3px 2px 1px lightgrey;
   padding-top: 0px;
   max-height:120px;
+  background-color: white;
+  text-align: center;
 }
 
 
@@ -133,14 +139,11 @@ label, button p{
   box-shadow: 0px 3px 2px 1px lightgrey;
   font-size: 12px;
   padding: 9px;
-
-  //   &:hover + .text-pro{
-  //   animation: 2s anim-pro-btn ease-out infinite;
-  // }
       &:hover + .list-pro{
     animation: 0.2s anim-list-pro ease-out;
      animation-fill-mode: forwards;
-  }
+   } 
+
 }
 
 
@@ -148,12 +151,8 @@ label, button p{
 margin:0px;
 color: white;
 font-weight: 500;
-transition: transform 330ms ease-in-out;
-  &:hover{
-  animation: 2s anim-pro-btn ease-out infinite;
-
   }
-}
+
 
 
 @keyframes anim-pro-btn {
