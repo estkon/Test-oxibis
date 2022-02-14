@@ -19,9 +19,9 @@
         <p>et celui la off course!</p>
         </div>
     </div>
-    <div class="foot-colonnes">
+    <div class="foot-colonnes col-6">
       <ul class="colonne">
-        <img src="../assets/img/lunettes-footer.png" alt="icone lunettes" />
+        <div><img src="../assets/img/lunettes-footer.png" alt="icone lunettes" /></div>
 
         <li>Donc, on est dans la lunette</li>
         <li>Vous en portez?</li>
@@ -29,30 +29,26 @@
         <li>C'est en capitale italic</li>
       </ul>
 
-      <div class="colonne">
-        <img src="../assets/img/bulle.png" alt="icone bulle conversation " />
-        <ul>
+      <ul class="colonne">
+        <div><img src="../assets/img/bulle.png" alt="icone bulle conversation " /></div>
+        
           <li>Donc, on est dans la lunette</li>
           <li>Blah blah</li>
           <li>bref on taille une bavette</li>
         </ul>
-      </div>
 
-      <div class="colonne">
-        <img src="../assets/img/cadenas.svg" alt="icone cadenas" />
-        <ul>
+
+      <ul class="colonne">
+        <div><img src="../assets/img/connexion.png" alt="icone cadenas" /></div>
           <li>Ici les zones lockées</li>
           <li>Genre login</li>
           <li>Et mot de passe</li>
         </ul>
-      </div>
-
     </div>
-          
 </div>
-  <div class="container-bleu col-12"> 
+  <div class="container-bleu col-11"> 
     <span class="triangle col-12"></span>
-    <span class="rectangle"></span>
+    <span class="rectangle col-12"></span>
 </div>
   </div>
 </template>
@@ -64,6 +60,10 @@ export default {
 </script>
 
 <style>
+
+.container-footer{
+    position: relative;
+}
 .container-jaune {
   background-color: #fbbb05;
   display: flex;
@@ -81,6 +81,9 @@ export default {
   display: flex;
   justify-content: space-around;
 }
+ul{
+    padding-left: 0;
+}
 
 li {
   list-style-type: none;
@@ -90,7 +93,7 @@ li {
   color: #d50c0c;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-left: -8em;
 }
 
 
@@ -106,7 +109,6 @@ flex-direction: column-reverse;
 
 
 .rectangle{
-	width:100%;
 	height:40px;
     background: #58aeb9;
     position: absolute;

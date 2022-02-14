@@ -61,6 +61,11 @@ export default {
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+   url(./fonts/Montserrat/static/Montserrat-Regular.ttf) format("truetype");
+}
 #app {
   // text-align: center;
   margin: 1em;
@@ -69,11 +74,8 @@ export default {
   background-attachment: fixed; /* Le fond restera fixe */
   background-repeat: no-repeat; /* Le fond ne sera pas répété */
   background-position: left; /* Le fond sera placé en haut à droite */
-}
-
-html,
-body {
-  font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
+  
 }
 
 .carte:nth-child(5) {
@@ -88,6 +90,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 5em;
 }
 
 .bienvenue {
