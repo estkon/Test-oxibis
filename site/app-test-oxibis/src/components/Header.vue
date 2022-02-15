@@ -80,13 +80,13 @@ export default {
 
 nav.navbar {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-end;
   flex-wrap: nowrap;
   max-height: 100px;
   overflow-y: hidden;
   padding-bottom: 8em;
   padding-top: 3em;
+  width:100%;
 }
 
 ////////////////////////////////***GESTION DES ANIMATIONS***//////////////////////////////
@@ -113,8 +113,10 @@ button p {
   border: 1px solid lightgrey;
   padding: 0px 10px;
   transition: 0.4s;
-  position:relative;
+  position:absolute;
   cursor: pointer;
+  right:5em;
+  background-color: white;
 }
 
 .search-text {
