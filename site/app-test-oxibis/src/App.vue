@@ -74,7 +74,7 @@ export default {
   background-attachment: fixed; /* Le fond restera fixe */
   background-repeat: no-repeat; /* Le fond ne sera pas répété */
   background-position: left; /* Le fond sera placé en haut à droite */
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   
 }
 
@@ -91,6 +91,8 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 5em;
+  position: relative;
+  
 }
 
 .bienvenue {
@@ -98,6 +100,7 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 10em;
 
   & p {
     margin: 1em 0em;

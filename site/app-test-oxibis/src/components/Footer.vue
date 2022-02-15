@@ -20,30 +20,32 @@
         </div>
     </div>
     <div class="foot-colonnes col-6">
-      <ul class="colonne">
-        <div><img src="../assets/img/lunettes-footer.png" alt="icone lunettes" /></div>
-
+      <div class="colonne">
+        <div class="img-colonne"><img src="../assets/img/lunettes-footer.png" alt="icone lunettes" /></div>
+        <ul class="liste-colonne">
         <li>Donc, on est dans la lunette</li>
         <li>Vous en portez?</li>
         <li>Attention à ce qui suit:</li>
         <li>C'est en capitale italic</li>
       </ul>
-
-      <ul class="colonne">
-        <div><img src="../assets/img/bulle.png" alt="icone bulle conversation " /></div>
-        
-          <li>Donc, on est dans la lunette</li>
+    </div>
+      <div class="colonne">
+        <div class="img-colonne"><img src="../assets/img/bulle.png" alt="icone bulle conversation " /></div>
+        <ul class="liste-colonne">
+          <li>Contact</li>
           <li>Blah blah</li>
           <li>bref on taille une bavette</li>
         </ul>
+    </div>
 
-
-      <ul class="colonne">
-        <div><img src="../assets/img/connexion.png" alt="icone cadenas" /></div>
+      <div class="colonne">
+        <div class="img-colonne"><img src="../assets/img/connexion.png" alt="icone cadenas" /></div>
+        <ul class="liste-colonne">
           <li>Ici les zones lockées</li>
           <li>Genre login</li>
           <li>Et mot de passe</li>
         </ul>
+    </div>
     </div>
 </div>
   <div class="container-bleu col-11"> 
@@ -60,7 +62,11 @@ export default {
 </script>
 
 <style>
-
+@font-face {
+  font-family: "Montserrat-bold";
+  src: local("Montserrat-bold"),
+   url(../fonts/Montserrat/static/Montserrat-Bold.ttf) format("truetype");
+}
 .container-footer{
     position: relative;
 }
@@ -80,14 +86,20 @@ export default {
 .foot-colonnes {
   display: flex;
   justify-content: space-around;
+  
 }
-ul{
+.liste-colonne{
     padding-left: 0;
+    font-weight: 600;
+    letter-spacing: 0.8px;
 }
 
 li {
   list-style-type: none;
   color: white;
+}
+.img-colonne{
+    height:46px;
 }
 .reseaux {
   color: #d50c0c;
@@ -95,10 +107,28 @@ li {
   flex-direction: column;
   margin-left: -8em;
 }
+.reseaux h4{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: "Montserrat-bold", sans-serif;
+}
+
+li:nth-child(4){
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: "Montserrat-bold", sans-serif;
+    
+}
 
 
 .picto{
     text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    }
+
+.picto p{
+    margin-top: 1em;
 }
 
 /* gestion de la forme */

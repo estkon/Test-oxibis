@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid header">
+  <div class="header">
     <div class="row">
       <div class="col-12 logo">
         <img src="../assets/img/header_logo.svg" alt="Oxibis Logo" />
@@ -48,16 +48,16 @@ export default {
 </script>
 
 <style lang="scss">
-.logo{
-  position:absolute;
-  padding-top:2em;
+.logo {
+  position: absolute;
+  padding-top: 2em;
 }
-.boutons{
-  position:relative;
-  display:flex;
+.boutons {
+  position: relative;
+  display: flex;
   justify-content: flex-end;
 }
-.bouton{
+.bouton {
   margin-right: 1em;
 }
 
@@ -68,11 +68,15 @@ export default {
   border-bottom-right-radius: 50%;
   box-shadow: 0px 3px 2px 1px lightgrey;
   padding-top: 0px;
-  max-height:120px;
+  max-height: 120px;
   background-color: white;
   text-align: center;
+  position: fixed;
+  width: auto;
+  top: 0;
+  right:1em;
+  left:1em;
 }
-
 
 nav.navbar {
   display: flex;
@@ -85,20 +89,18 @@ nav.navbar {
   padding-top: 3em;
 }
 
-
-
 ////////////////////////////////***GESTION DES ANIMATIONS***//////////////////////////////
 
 // ***************************Barre de recherche****************************************//
 
-label, button p{
+label,
+button p {
   padding: 0.2em;
 }
 .search-box:hover > .search-text {
   width: 150px;
   padding: 0 3px;
-  font-size: 12px; 
-  
+  font-size: 12px;
 }
 
 .search-box {
@@ -111,8 +113,8 @@ label, button p{
   border: 1px solid lightgrey;
   padding: 0px 10px;
   transition: 0.4s;
+  position:relative;
   cursor: pointer;
- 
 }
 
 .search-text {
@@ -126,8 +128,6 @@ label, button p{
   line-height: 40px;
   width: 0px;
   transition: 0.4s;
-  
-
 }
 
 // ***************************Bouton PRO****************************************//
@@ -135,25 +135,21 @@ label, button p{
   position: absolute;
   background-color: #d50c0c;
   border-radius: 100%;
-  border:none;
+  border: none;
   box-shadow: 0px 3px 2px 1px lightgrey;
   font-size: 12px;
   padding: 9px;
-      &:hover + .list-pro{
+  &:hover + .list-pro {
     animation: 0.2s anim-list-pro ease-out;
-     animation-fill-mode: forwards;
-   } 
-
+    animation-fill-mode: forwards;
+  }
 }
 
-
 .text-pro {
-margin:0px;
-color: white;
-font-weight: 500;
-  }
-
-
+  margin: 0px;
+  color: white;
+  font-weight: 500;
+}
 
 @keyframes anim-pro-btn {
   0% {
@@ -171,27 +167,25 @@ font-weight: 500;
   0% {
     opacity: 1;
     transform: translateY(-80%);
-    
   }
 
   100% {
     opacity: 1;
     transform: translateY(0%);
-   
   }
 }
 // *****************liste cachée*****************//
-.animation-pro{
+.animation-pro {
   position: relative;
-      display: flex;
-    align-items: center
+  display: flex;
+  align-items: center;
 }
 
-.list-pro{
+.list-pro {
   z-index: 1;
-  list-style:none;
+  list-style: none;
   background-color: #d50c0c;
-  color:white;
+  color: white;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -201,15 +195,9 @@ font-weight: 500;
   padding-top: 2em;
   margin-top: 3.4em;
   transform: translateY(-200%);
-
-
-  
 }
-ul li{
-    font-size: 0.8em;
-        padding-top: 1em;
+ul li {
+  font-size: 0.8em;
+  padding-top: 1em;
 }
-
-
-
 </style>
